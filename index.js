@@ -19,10 +19,13 @@ var inputText = document.getElementById('input-field')
 addBtn.addEventListener('click',function(){
    
     var inputField = inputText.value
-    push(shoppingListDB, inputField)
-    var li = document.createElement('li');
-
-    clearInputField(inputText)
+    if(inputField != ""){
+        push(shoppingListDB, inputField)
+        var li = document.createElement('li');
+    
+        clearInputField(inputText)
+    }
+   
 })
 
 //retrieve data from database
